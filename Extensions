@@ -1,0 +1,68 @@
+extension Shape {
+	func point(x: Double, y: Double) -> CGPoint {
+		return CGPoint(x: x, y: y)
+	}
+
+	func point(x: Double, y: Double, rect: CGRect) -> CGPoint {
+		//vector values are expected to be in the range of 0...1
+		return CGPoint(x: Double(rect.width) * x, y: Double(rect.height) * y)
+	}
+}
+
+// The following two Extensions come from https://alexdremov.me/swiftui-advanced-animation/
+// This code makes CGPoint comply with VectorArithmetic so shapes can animate point changes
+extension CGPoint {
+	public static func +(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
+		CGPoint(x: lhs.x + rhs.x, y: lhs.y + rhs.y)
+	}
+
+	static func +(lhs: CGPoint, rhs: CGVector) -> CGPoint {
+		CGPoint(x: lhs.x + rhs.dx, y: lhs.y + rhs.dy)
+	}
+
+	static func -(lhs: CGPoint, rhs: CGVector) -> CGPoint {
+		CGPoint(x: lhs.x - rhs.dx, y: lhs.y - rhs.dy)
+	}
+
+	public static func -(lhs: CGPoint, rhs: CGPoint) -> CGPoint {
+		CGPoint(x: lhs.x - rhs.x, y: lhs.y - rhs.y)
+	}
+
+	init(_ vec: CGVector) {
+		self = CGPoint(x: vec.dx, y: vec.dy)
+	}
+}
+
+extension CGPoint: VectorArithmetic {
+	public mutating func scale(by rhs: Double) {
+		x = CGFloat(rhs) * x
+		y = CGFloat(rhs) * y
+	}
+
+	public var magnitudeSquared: Double {
+		Double(x * x + y * y)
+	}
+}
+
+// https://nerdyak.tech/development/2020/05/07/morphing-shapes-in-swiftui.html
+// For use with MorphableShape and AnimatableVector
+extension Path {
+	// return point at the curve
+	func point(at offset: CGFloat) -> CGPoint {
+		let limitedOffset = min(max(offset, 0), 1)
+		guard limitedOffset > 0 else { return cgPath.currentPoint }
+		return trimmedPath(from: 0, to: limitedOffset).cgPath.currentPoint
+	}
+
+	// return control points along the path
+	func controlPoints(count: Int) -> AnimatableVector {
+		var retPoints = [Double]()
+		for index in 0..<count {
+			let pathOffset = Double(index)/Double(count)
+			let pathPoint = self.point(at: CGFloat(pathOffset))
+			retPoints.append(Double(pathPoint.x))
+			retPoints.append(Double(pathPoint.y))
+		}
+		return AnimatableVector(with: retPoints)
+	}
+}
