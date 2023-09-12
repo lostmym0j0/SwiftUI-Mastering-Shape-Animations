@@ -1,4 +1,2 @@
 # SwiftUI: Mastering Shape Animations
-If I write some text here, what will happen? How will it show up once I "commit changes?" I'm very curious to see how this text will display and, even moreso, I'm curious to know how the text wraps and what happens if I place an empty line.
-
-I have now placed an empty line.
+First, I would like to provide an example of the finished product and briefly explain what my "specs" were. Then I will discuss the entire process of satisfying the specs and the steps taken to accomplish this animation. As I explain the process of building this animation, I will provide enough detail and code for most readers to build and animate their own custom shapes. I will also provide a list to all resources I used to understand Shape animation in SwiftUI and build this animation myself. This should prove to be a one-stop collection of resources for anyone trying to understand and utilize SwiftUI Shape animations to their fullest potential.
