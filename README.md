@@ -13,6 +13,7 @@ This is the bottom of my "Exercise Explorer" scene. This is my attempt at creati
 ![](https://github.com/lostmym0j0/SwiftUI-Mastering-Shape-Animations/blob/main/Media/Final%20Product%20Slowed.gif)
 
 <sub>This is the final product.</sub>
+
 ![](https://github.com/lostmym0j0/SwiftUI-Mastering-Shape-Animations/blob/main/Media/Final%20Product%20(-buttons)%20Slowed.gif)
 
 <sub>This is the final animation without the buttons.</sub>
