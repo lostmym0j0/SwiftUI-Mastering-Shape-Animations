@@ -15,4 +15,6 @@ This is the bottom of my "Exercise Explorer" scene. This is my attempt at creati
 
 I wanted to maintain compliance with accessibility requirements so I had to build these shapes around the sizing of my buttons. The buttons are also built around the text they contain. So if the user changes text size or if the app is ever translated into different languages, the buttons will match the new text size or text length and the shape will also match the buttons sizes.
 
-In order to do this, I needed to collect size information on first, the button text, and second, the buttons. 
+### Collecting Size Information
+
+In order to do this, I needed to collect size information on first, the button text, and second, the buttons.
