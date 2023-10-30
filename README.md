@@ -18,3 +18,4 @@ I wanted to maintain compliance with accessibility requirements so I had to buil
 ### Collecting Size Information
 
 In order to do this, I needed to collect size information on first, the button text, and second, the buttons.
+
