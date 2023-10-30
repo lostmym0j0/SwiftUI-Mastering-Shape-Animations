@@ -11,8 +11,10 @@ First, provide an example of the finished product and briefly explain what my "s
 This is the bottom of my "Exercise Explorer" scene. This is my attempt at creating a sort of tab bar with a glass design. I imagined the bubble at the top of this shape expanding when the user clicks the plus button. Five options expand out from under the plus button. But I wanted those five options to hover over the glass tab bar just like the other three buttons shown.
 
 ![](https://github.com/lostmym0j0/SwiftUI-Mastering-Shape-Animations/blob/main/Media/Final%20Product%20Slowed.gif)
+
 <sub>This is the final product.</sub>
 ![](https://github.com/lostmym0j0/SwiftUI-Mastering-Shape-Animations/blob/main/Media/Final%20Product%20(-buttons)%20Slowed.gif)
+
 <sub>This is the final animation without the buttons.</sub>
 
 I wanted to maintain compliance with accessibility requirements so I had to build these shapes around the sizing of my buttons. The buttons are also built around the text they contain. So if the user changes text size or if the app is ever translated into different languages, the buttons will match the new text size or text length and the shape will also match the buttons sizes.
