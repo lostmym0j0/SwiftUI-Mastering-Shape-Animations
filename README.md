@@ -14,15 +14,9 @@ This is the bottom of my "Exercise Explorer" scene. This is my attempt at creati
 |:--:| 
 | *This is the final product.* |
 
-<figure class="image">
-<img src="https://github.com/lostmym0j0/SwiftUI-Mastering-Shape-Animations/blob/main/Media/Final%20Product%20Slowed.gif" />
-<figcaption>This is the final product.</figcaption>
-</figure>
-
-![](https://github.com/lostmym0j0/SwiftUI-Mastering-Shape-Animations/blob/main/Media/Final%20Product%20Slowed.gif)
-![](https://github.com/lostmym0j0/SwiftUI-Mastering-Shape-Animations/blob/main/Media/Final%20Product%20(-buttons)%20Slowed.gif)
-
-<sub>This is the final animation without the buttons.</sub>
+| ![](https://github.com/lostmym0j0/SwiftUI-Mastering-Shape-Animations/blob/main/Media/Final%20Product%20(-buttons)%20Slowed.gif) |
+|:--:|
+| *This is the final animation without the buttons.* |
 
 I wanted to maintain compliance with accessibility requirements so I had to build these shapes around the sizing of my buttons. The buttons are also built around the text they contain. So if the user changes text size or if the app is ever translated into different languages, the buttons will match the new text size or text length and the shape will also match the buttons sizes.
 
