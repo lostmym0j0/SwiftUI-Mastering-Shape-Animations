@@ -19,3 +19,4 @@ I wanted to maintain compliance with accessibility requirements so I had to buil
 
 In order to do this, I needed to collect size information on first, the button text, and second, the buttons.
 
+![](https://github.com/lostmym0j0/SwiftUI-Mastering-Shape-Animations/blob/main/Media/Just%20The%20Buttons.gif)
