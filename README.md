@@ -13,5 +13,6 @@ This is the bottom of my "Exercise Explorer" scene. This is my attempt at creati
 ![](https://github.com/lostmym0j0/SwiftUI-Mastering-Shape-Animations/blob/main/Media/Final%20Product%20Slowed.gif)
 ![](https://github.com/lostmym0j0/SwiftUI-Mastering-Shape-Animations/blob/main/Media/Final%20Product%20(-buttons)%20Slowed.gif)
 
-However, this animation proved incredibly difficult to implement. This forced me to take a deep dive into SwiftUI Shapes. Now, I'm sharing what I've learned about working with Shapes and AnimatableData in SwiftUI.
+I wanted to maintain compliance with accessibility requirements so I had to build these shapes around the sizing of my buttons. The buttons are also built around the text they contain. So if the user changes text size or if the app is ever translated into different languages, the buttons will match the new text size or text length and the shape will also match the buttons sizes.
 
+In order to do this, I needed to collect size information on first, the button text, and second, the buttons. 
